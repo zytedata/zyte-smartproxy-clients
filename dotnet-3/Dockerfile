@@ -6,12 +6,9 @@ ENV PATH=$PATH:/root/.dotnet/tools
 COPY crawlera-ca.crt /
 
 RUN cp crawlera-ca.crt /usr/local/share/ca-certificates/ &&\
-		update-ca-certificates
-
+    update-ca-certificates
 
 RUN openssl pkcs12 -export -nokeys -in crawlera-ca.crt -out crawlera-ca.pfx -password pass:changeit
-RUN cp crawlera-ca.pfx /root/.dotnet/corefx/cryptography/x509stores/my/crawlera-ca.pfx
-
 
 COPY client.csx /
 RUN dotnet script publish client.csx 
