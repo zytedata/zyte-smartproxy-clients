@@ -1,0 +1,8 @@
+FROM r-base:4.0.2
+
+RUN apt-get update && apt-get -y install libssl-dev libcurl4-openssl-dev
+RUN Rscript -e "install.packages('httr')"
+
+COPY crawlera-ca.crt client.R /
+
+CMD Rscript client.R
