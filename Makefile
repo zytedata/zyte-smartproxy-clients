@@ -15,7 +15,7 @@ help:
 
 build:
 	@for C in $(CLIENTS); do \
-		docker build -f $$C/Dockerfile -t crawlera-clients:$$C . || exit 1;\
+		docker build -f docker/Dockerfile.$$C -t crawlera-clients:$$C . || exit 1;\
 	done
 
 all: $(CLIENTS)
