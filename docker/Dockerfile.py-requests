@@ -1,0 +1,7 @@
+FROM python:3.8
+
+RUN pip3 install requests
+
+COPY crawlera-ca.crt client-requests.py /
+
+CMD python3 client-requests.py

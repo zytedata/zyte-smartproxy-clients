@@ -1,0 +1,15 @@
+FROM python:3.8
+
+RUN pip3 --no-cache-dir install scrapy-crawlera
+
+RUN scrapy startproject client
+WORKDIR client
+
+RUN printf "\
+DOWNLOADER_MIDDLEWARES = {'scrapy_crawlera.CrawleraMiddleware': 610} \n\
+ROBOTSTXT_OBEY = False \n\
+" >> client/settings.py
+
+COPY client-scrapy.py client/spiders
+
+CMD bash -c "scrapy crawl client; test -e /GOTIT"

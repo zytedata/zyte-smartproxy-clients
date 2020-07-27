@@ -1,9 +1,9 @@
 require 'net/http'
 
 url = URI(ENV['URL'])
-phost, pport = ENV['PROXY'].split(':')
+proxy_host, proxy_port = ENV['PROXY'].split(':')
 
-http = Net::HTTP.new(url.host, url.port, phost, pport, ENV['KEY'], '')
+http = Net::HTTP.new(url.host, url.port, proxy_host, proxy_port, ENV['KEY'], '')
 
 http.use_ssl = true
 http.ca_file = 'crawlera-ca.crt'
