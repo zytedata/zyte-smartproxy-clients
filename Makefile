@@ -19,44 +19,9 @@ build:
 		docker build -f docker/Dockerfile.$$C -t crawlera-clients:$$C . || exit 1;\
 	done
 
+$(IMAGES):
+	docker run --rm --net=host -e URL -e KEY -e PROXY crawlera-clients:$@
+
 all: $(IMAGES)
-
-RUN=@docker run --rm --net=host -e URL -e KEY -e PROXY crawlera-clients:$@
-
-nodejs-10:
-	$(RUN)
-
-nodejs-12:
-	$(RUN)
-
-nodejs-14:
-	$(RUN)
-
-php-5:
-	$(RUN)
-
-php-7:
-	$(RUN)
-
-java-7:
-	$(RUN)
-
-java-14:
-	$(RUN)
-
-r-4:
-	$(RUN)
-
-dotnet-3:
-	$(RUN)
-
-py-requests:
-	$(RUN)
-
-py-scrapy:
-	$(RUN)
-
-ruby-2:
-	$(RUN)
 
 .PHONY: help build all $(IMAGES)
