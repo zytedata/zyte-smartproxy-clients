@@ -1,0 +1,13 @@
+name: py-scrapy
+on: push
+env:
+  PROXY: proxy.crawlera.com:8010
+  KEY: ${{secrets.KEY}}
+  URL: https://scrapy.org/
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: py-scrapy
+        run: make py-scrapy

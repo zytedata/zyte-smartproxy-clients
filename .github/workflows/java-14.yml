@@ -1,0 +1,13 @@
+name: java-14
+on: push
+env:
+  PROXY: proxy.crawlera.com:8010
+  URL: https://scrapy.org/
+  KEY: ${{secrets.KEY}}
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: java-14
+        run: make java-14

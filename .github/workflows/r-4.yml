@@ -1,0 +1,13 @@
+name: r-4
+on: push
+env:
+  PROXY: proxy.crawlera.com:8010
+  URL: https://scrapy.org/
+  KEY: ${{secrets.KEY}}
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: r-4
+        run: make r-4

@@ -1,0 +1,13 @@
+name: nodejs-12
+on: push
+env:
+  PROXY: proxy.crawlera.com:8010
+  URL: https://scrapy.org/
+  KEY: ${{secrets.KEY}}
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: nodejs-12
+        run: make nodejs-12

@@ -1,0 +1,13 @@
+name: ruby-2
+on: push
+env:
+  PROXY: proxy.crawlera.com:8010
+  URL: https://scrapy.org/
+  KEY: ${{secrets.KEY}}
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: ruby-2
+        run: make ruby-2
