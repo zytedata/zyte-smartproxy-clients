@@ -1,6 +1,4 @@
-FROM ubuntu:precise-20151020
-
-RUN apt-get update && apt-get -y install curl php5 php5-curl
+FROM php:5.5
 
 COPY crawlera-ca.crt client.php /
 
