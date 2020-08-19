@@ -1,21 +1,19 @@
-![py-scrapy](https://github.com/scrapinghub/crawlera-clients/workflows/py-scrapy/badge.svg)
-![py-requests](https://github.com/scrapinghub/crawlera-clients/workflows/py-requests/badge.svg)
-![nodejs-10](https://github.com/scrapinghub/crawlera-clients/workflows/nodejs-10/badge.svg)
-![nodejs-12](https://github.com/scrapinghub/crawlera-clients/workflows/nodejs-12/badge.svg)
-![nodejs-14](https://github.com/scrapinghub/crawlera-clients/workflows/nodejs-14/badge.svg)
-![php-5](https://github.com/scrapinghub/crawlera-clients/workflows/php-5/badge.svg)
-![php-7](https://github.com/scrapinghub/crawlera-clients/workflows/php-7/badge.svg)
-![java-7](https://github.com/scrapinghub/crawlera-clients/workflows/java-7/badge.svg)
-![java-14](https://github.com/scrapinghub/crawlera-clients/workflows/java-14/badge.svg)
-![r-4](https://github.com/scrapinghub/crawlera-clients/workflows/r-4/badge.svg)
-![ruby-2](https://github.com/scrapinghub/crawlera-clients/workflows/ruby-2/badge.svg)
+[![py-scrapy](https://github.com/scrapinghub/crawlera-clients/workflows/py-scrapy/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:py-scrapy)
+[![py-requests](https://github.com/scrapinghub/crawlera-clients/workflows/py-requests/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:py-requests)
+[![nodejs-10](https://github.com/scrapinghub/crawlera-clients/workflows/nodejs-10/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:nodejs-10)
+[![nodejs-12](https://github.com/scrapinghub/crawlera-clients/workflows/nodejs-12/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:nodejs-12)
+[![nodejs-14](https://github.com/scrapinghub/crawlera-clients/workflows/nodejs-14/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:nodejs-14)
+[![php-5](https://github.com/scrapinghub/crawlera-clients/workflows/php-5/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:php-5)
+[![php-7](https://github.com/scrapinghub/crawlera-clients/workflows/php-7/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:php-7)
+[![java-7](https://github.com/scrapinghub/crawlera-clients/workflows/java-7/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:java-7)
+[![java-14](https://github.com/scrapinghub/crawlera-clients/workflows/java-14/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:java-14)
+[![ruby-2](https://github.com/scrapinghub/crawlera-clients/workflows/ruby-2/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:ruby-2)
+[![r-4](https://github.com/scrapinghub/crawlera-clients/workflows/r-4/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:r-4)
 
 
-To run locally you need to have `docker` and `make` installed.
-
-To scrape the site:
+Ensure you have `docker` and `make` installed and then run:
 ```
-	make CLIENT PROXY=... KEY=... URL=...
+make CLIENT PROXY=... KEY=... URL=...
 ```
 
 Where:
