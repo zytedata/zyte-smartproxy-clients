@@ -3,7 +3,7 @@ on: push
 env:
   PROXY: proxy.crawlera.com:8010
   KEY: ${{secrets.KEY}}
-  URL: https://scrapy.org/
+  URL: https://httpbin.scrapinghub.com/ip
 jobs:
   scrape:
     runs-on: ubuntu-latest

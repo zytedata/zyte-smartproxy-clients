@@ -2,7 +2,7 @@ name: php-7
 on: push
 env:
   PROXY: proxy.crawlera.com:8010
-  URL: https://scrapy.org/
+  URL: https://httpbin.scrapinghub.com/ip
   KEY: ${{secrets.KEY}}
 jobs:
   scrape:
