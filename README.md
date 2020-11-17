@@ -9,6 +9,7 @@
 [![java-14](https://github.com/scrapinghub/crawlera-clients/workflows/java-14/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:java-14)
 [![ruby-2](https://github.com/scrapinghub/crawlera-clients/workflows/ruby-2/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:ruby-2)
 [![r-4](https://github.com/scrapinghub/crawlera-clients/workflows/r-4/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:r-4)
+[![dotnet-3](https://github.com/scrapinghub/crawlera-clients/workflows/dotnet-3/badge.svg)](https://github.com/scrapinghub/crawlera-clients/actions?query=workflow:dotnet-3)
 
 
 Ensure you have `docker` and `make` installed and then run:

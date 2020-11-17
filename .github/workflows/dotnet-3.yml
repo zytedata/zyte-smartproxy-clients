@@ -1,0 +1,13 @@
+name: dotnet-3
+on: push
+env:
+  PROXY: proxy.crawlera.com:8010
+  URL: https://httpbin.scrapinghub.com/ip
+  KEY: ${{secrets.KEY}}
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: dotnet-3
+        run: make dotnet-3
