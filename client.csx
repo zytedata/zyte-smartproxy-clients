@@ -10,7 +10,7 @@ var handler = new SocketsHttpHandler {
 };
 
 var client = new HttpClient(handler);
-HttpResponseMessage response = client.GetAsync(System.Environment.GetEnvironmentVariable("URL")).GetAwaiter().GetResult();
+HttpResponseMessage response = await client.GetAsync(System.Environment.GetEnvironmentVariable("URL"));
 Console.WriteLine(response);
 
 return response.IsSuccessStatusCode ? 0 : -1;
