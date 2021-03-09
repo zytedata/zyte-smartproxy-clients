@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: java-14
-        run: make java-14
+      - run: make $GITHUB_WORKFLOW

@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: nodejs-12
-        run: make nodejs-12
+      - run: make $GITHUB_WORKFLOW
