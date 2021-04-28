@@ -7,8 +7,8 @@ ENV CERTPATH=$JAVA_HOME/jre/lib/security/cacerts
 
 RUN wget http://archive.apache.org/dist/httpcomponents/httpclient/binary/$HTTPPATH-bin.tar.gz -O - | tar xz
 
-COPY crawlera-ca.crt .
-RUN keytool -noprompt -import -file crawlera-ca.crt -storepass changeit -keystore $CERTPATH -alias crawleracert
+COPY zyte-smartproxy-ca.crt .
+RUN keytool -noprompt -import -file zyte-smartproxy-ca.crt -storepass changeit -keystore $CERTPATH -alias zytesmartproxycert
 
 COPY client.java .
 RUN javac -cp $HTTPPATH/lib/httpclient-$HTTPCLIENT.jar:$HTTPPATH/lib/httpcore-$HTTPCORE.jar client.java

@@ -1,10 +1,10 @@
 FROM python:3.8
 
-RUN pip3 --no-cache-dir install scrapy-crawlera
+RUN pip3 --no-cache-dir install scrapy-zyte-smartproxy
 
 RUN scrapy startproject client &&\
     printf "\
-DOWNLOADER_MIDDLEWARES = {'scrapy_crawlera.CrawleraMiddleware': 610} \n\
+DOWNLOADER_MIDDLEWARES = {'scrapy_zyte_smartproxy.ZyteSmartProxyMiddleware': 610} \n\
 ROBOTSTXT_OBEY = False \n\
 " >> client/client/settings.py
 

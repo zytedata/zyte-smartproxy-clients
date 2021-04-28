@@ -4,7 +4,7 @@ proxy <- strsplit(Sys.getenv('PROXY'), ':')[[1]]
 
 r <- GET(
   Sys.getenv('URL'),
-  config(cainfo = 'crawlera-ca.crt'),
+  config(cainfo = 'zyte-smartproxy-ca.crt'),
   use_proxy(
     url = proxy[1],
     port = strtoi(proxy[2]),

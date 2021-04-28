@@ -5,7 +5,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, getenv('URL'));
 curl_setopt($ch, CURLOPT_PROXY, getenv('PROXY'));
 curl_setopt($ch, CURLOPT_PROXYUSERPWD, getenv('KEY'));
-curl_setopt($ch, CURLOPT_CAINFO, 'crawlera-ca.crt');
+curl_setopt($ch, CURLOPT_CAINFO, 'zyte-smartproxy-ca.crt');
 curl_setopt($ch, CURLOPT_HEADER, 1);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

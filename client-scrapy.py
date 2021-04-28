@@ -3,9 +3,9 @@ import os
 
 class ClientSpider(scrapy.Spider):
     name = 'client'
-    crawlera_enabled = True
-    crawlera_apikey = os.environ.get('KEY')
-    crawlera_url = 'http://' + os.environ.get('PROXY')
+    zyte_smartproxy_enabled = True
+    zyte_smartproxy_apikey = os.environ.get('KEY')
+    zyte_smartproxy_url = 'http://' + os.environ.get('PROXY')
 
     def start_requests(self):
         yield scrapy.Request(url=os.environ.get('URL'))

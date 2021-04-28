@@ -3,7 +3,7 @@ import os
 
 proxy = 'http://' + os.environ.get('KEY') + ':@' + os.environ.get('PROXY')
 
-r = requests.get(os.environ.get('URL'), proxies={'https': proxy}, verify='crawlera-ca.crt')
+r = requests.get(os.environ.get('URL'), proxies={'https': proxy}, verify='zyte-smartproxy-ca.crt')
 
 print(r)
 

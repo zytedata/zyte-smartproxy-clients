@@ -3,7 +3,7 @@ var fs = require('fs');
 
 var options = {
     url: process.env.URL,
-    ca: fs.readFileSync("crawlera-ca.crt"),
+    ca: fs.readFileSync("zyte-smartproxy-ca.crt"),
 };
 
 var new_req = request.defaults({
