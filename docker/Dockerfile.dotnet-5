@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:5.0
 
 WORKDIR /client
 
@@ -10,11 +10,11 @@ RUN dotnet -d publish -c Release -r linux-musl-x64 -p:PublishSingleFile=true
 
 FROM alpine:3.13
 
-RUN apk --no-cache add gettext-libs icu-libs krb5-libs ca-certificates
+RUN apk --no-cache add icu-libs krb5-libs ca-certificates
 
 COPY crawlera-ca.crt /usr/local/share/ca-certificates/
 RUN update-ca-certificates
 
-COPY --from=0 /client/bin/Release/netcoreapp3.1/linux-musl-x64/publish/client /
+COPY --from=0 /client/bin/Release/net5.0/linux-musl-x64/publish/client /
 
 CMD /client

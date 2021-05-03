@@ -1,0 +1,12 @@
+name: julia
+on: push
+env:
+  PROXY: proxy.crawlera.com:8011
+  URL: https://httpbin.scrapinghub.com/ip
+  KEY: ${{secrets.KEY}}
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: make $GITHUB_WORKFLOW
