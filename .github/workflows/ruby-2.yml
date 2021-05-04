@@ -1,7 +1,7 @@
 name: ruby-2
 on: push
 env:
-  PROXY: proxy.zyte.com:8010
+  PROXY: proxy.zyte.com:8011
   URL: https://httpbin.scrapinghub.com/ip
   KEY: ${{secrets.KEY}}
 jobs:

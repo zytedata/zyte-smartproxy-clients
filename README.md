@@ -25,5 +25,5 @@ Where:
 
 Example:
 ```
-make nodejs-14 PROXY=proxy.zyte.com:8010 KEY=VALID_API_KEY URL=https://toscrape.com/
+make nodejs-14 PROXY=proxy.zyte.com:8011 KEY=VALID_API_KEY URL=https://toscrape.com/
 ```
