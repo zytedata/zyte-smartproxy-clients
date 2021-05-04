@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: ruby-2
-        run: make ruby-2
+      - run: make $GITHUB_WORKFLOW

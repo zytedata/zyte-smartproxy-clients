@@ -1,0 +1,9 @@
+FROM alpine:3.13
+
+RUN apk --no-cache add curl firefox py3-pip py3-cryptography
+RUN curl -L https://github.com/mozilla/geckodriver/releases/download/v0.29.0/geckodriver-v0.29.0-linux64.tar.gz | tar xz &&\
+    mv geckodriver /usr/bin/
+RUN pip3 install selenium selenium-wire
+
+COPY client-firefox.py /
+CMD python3 client-firefox.py

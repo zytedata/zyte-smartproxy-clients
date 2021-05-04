@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: r-4
-        run: make r-4
+      - run: make $GITHUB_WORKFLOW

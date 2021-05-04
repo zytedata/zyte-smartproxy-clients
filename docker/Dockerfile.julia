@@ -1,0 +1,8 @@
+FROM julia:1.6-alpine
+
+RUN julia -e 'using Pkg; Pkg.add("HTTP"); Pkg.add("MbedTLS");'
+
+COPY crawlera-ca.crt /
+COPY client.jl /
+
+CMD julia client.jl

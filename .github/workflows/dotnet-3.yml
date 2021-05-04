@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: dotnet-3
-        run: make dotnet-3
+      - run: make $GITHUB_WORKFLOW

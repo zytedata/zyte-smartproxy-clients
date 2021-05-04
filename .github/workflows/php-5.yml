@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: php-5
-        run: make php-5
+      - run: make $GITHUB_WORKFLOW

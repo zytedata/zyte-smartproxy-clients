@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: py-scrapy
-        run: make py-scrapy
+      - run: make $GITHUB_WORKFLOW
