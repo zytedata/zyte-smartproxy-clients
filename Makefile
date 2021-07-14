@@ -1,4 +1,5 @@
 IMAGES=\
+	rust \
 	nodejs-10 \
 	nodejs-12 \
 	nodejs-14 \
