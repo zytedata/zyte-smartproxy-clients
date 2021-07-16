@@ -1,7 +1,7 @@
 name: py-scrapy
 on: [push, pull_request]
 env:
-  PROXY: proxy.zyte.com:8011
+  PROXY: proxy.crawlera.com:8011
   KEY: ${{secrets.KEY}}
   URL: https://httpbin.scrapinghub.com/ip
 jobs:
