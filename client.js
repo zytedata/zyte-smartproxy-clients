@@ -3,7 +3,7 @@ var fs = require('fs');
 
 request({
     uri: process.env.URL,
-    ca: fs.readFileSync("crawlera-ca.crt"),
+    ca: fs.readFileSync("zyte-smartproxy-ca.crt"),
     proxy: 'http://' + process.env.KEY + ':@' + process.env.PROXY
 }, function callback(error, response, body) {
     console.log(error, body);

@@ -17,6 +17,6 @@ RUN echo >src/lib.rs &&\
 COPY client.rs src/main.rs
 RUN cargo build
 
-COPY crawlera-ca.crt .
+COPY zyte-smartproxy-ca.crt .
 
 CMD cargo run

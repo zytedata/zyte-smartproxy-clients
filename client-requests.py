@@ -6,7 +6,7 @@ r = requests.get(
     proxies={
         'https': 'http://' + os.environ.get('KEY') + ':@' + os.environ.get('PROXY')
     },
-    verify='crawlera-ca.crt'
+    verify='zyte-smartproxy-ca.crt'
 )
 
 print(r.text)

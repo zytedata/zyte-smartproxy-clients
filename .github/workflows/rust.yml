@@ -1,7 +1,7 @@
 name: rust
 on: push
 env:
-  PROXY: proxy.crawlera.com:8014
+  PROXY: proxy.zyte.com:8014
   URL: https://httpbin.scrapinghub.com/ip
   KEY: ${{secrets.KEY}}
 jobs:

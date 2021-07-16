@@ -3,7 +3,7 @@ use reqwest::{Certificate,Proxy,Client};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn error::Error>> {
-    let pem = fs::read_to_string("crawlera-ca.crt")?;
+    let pem = fs::read_to_string("zyte-smartproxy-ca.crt")?;
     let cert = Certificate::from_pem(pem.as_bytes())?;
 
     let proxy_url = format!("https://{}", env::var("PROXY")?);

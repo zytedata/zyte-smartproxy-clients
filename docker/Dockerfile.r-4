@@ -4,6 +4,6 @@ RUN apt-get update && apt-get -y install libssl-dev libcurl4-openssl-dev
 
 RUN MAKEFLAGS=-j4 Rscript -e "install.packages('httr')"
 
-COPY crawlera-ca.crt client.R /
+COPY zyte-smartproxy-ca.crt client.R /
 
 CMD Rscript client.R

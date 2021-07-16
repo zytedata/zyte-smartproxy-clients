@@ -59,7 +59,7 @@ public class client {
             BasicScheme basicAuth = new BasicScheme();
             basicAuth.processChallenge(
                     new BasicHeader(HttpHeaders.PROXY_AUTHENTICATE,
-                                    "Basic realm=\"Crawlera\""));
+                                    "Basic realm=\"Zyte Smart Proxy Manager\""));
             authCache.put(proxy, basicAuth);
 
             HttpClientContext ctx = HttpClientContext.create();
