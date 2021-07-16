@@ -1,5 +1,5 @@
 name: py-scrapy
-on: push
+on: [push, pull_request]
 env:
   PROXY: proxy.zyte.com:8011
   KEY: ${{secrets.KEY}}

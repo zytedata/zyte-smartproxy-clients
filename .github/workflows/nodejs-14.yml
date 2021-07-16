@@ -1,5 +1,5 @@
 name: nodejs-14
-on: push
+on: [push, pull_request]
 env:
   PROXY: proxy.zyte.com:8011
   URL: https://httpbin.scrapinghub.com/ip
