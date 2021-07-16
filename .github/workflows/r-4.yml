@@ -1,5 +1,5 @@
 name: r-4
-on: push
+on: [push, pull_request]
 env:
   PROXY: proxy.crawlera.com:8010
   URL: https://httpbin.scrapinghub.com/ip

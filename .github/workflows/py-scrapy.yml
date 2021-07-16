@@ -1,5 +1,5 @@
 name: py-scrapy
-on: push
+on: [push, pull_request]
 env:
   PROXY: proxy.crawlera.com:8010
   KEY: ${{secrets.KEY}}
