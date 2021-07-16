@@ -1,7 +1,3 @@
-URL:=https://httpbin.org/get
-KEY:=VALID_API_KEY
-PROXY:=proxy.zyte.com:8011
-
 IMAGES=\
 	rust \
 	nodejs-10 \
@@ -24,6 +20,6 @@ all: $(IMAGES)
 
 $(IMAGES):
 	docker build -f docker/Dockerfile.$@ -t zyte-smartproxy-clients:$@ .
-	docker run --rm --net=host -e URL=${URL} -e KEY=${KEY} -e PROXY=${PROXY} zyte-smartproxy-clients:$@
+	docker run --rm --net=host -e URL -e KEY -e PROXY zyte-smartproxy-clients:$@
 
 .PHONY: all $(IMAGES)
