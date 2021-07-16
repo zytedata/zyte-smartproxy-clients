@@ -1,0 +1,22 @@
+FROM alpine:3.14
+
+## Install toolchain
+RUN apk --no-cache add cargo
+
+## Generate package
+RUN cargo new --lib client
+WORKDIR client
+
+## Build deps only
+RUN echo >src/lib.rs &&\
+    echo 'reqwest = { version = "0.11", default-features = false, features = ["rustls-tls"] }' >> Cargo.toml &&\
+    echo 'tokio = { version = "1", default-features = false, features = ["macros", "rt-multi-thread"] }' >> Cargo.toml &&\
+    cargo build
+
+## Build binary
+COPY client.rs src/main.rs
+RUN cargo build
+
+COPY zyte-smartproxy-ca.crt .
+
+CMD cargo run

@@ -3,6 +3,7 @@ KEY:=VALID_API_KEY
 PROXY:=proxy.zyte.com:8011
 
 IMAGES=\
+	rust \
 	nodejs-10 \
 	nodejs-12 \
 	nodejs-14 \
