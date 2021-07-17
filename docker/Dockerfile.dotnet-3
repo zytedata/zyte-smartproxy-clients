@@ -12,7 +12,8 @@ FROM alpine:3.13
 
 RUN apk --no-cache add gettext-libs icu-libs krb5-libs ca-certificates
 
-COPY zyte-smartproxy-ca.crt /usr/local/share/ca-certificates/
+ARG ZYTE_CA
+ADD $ZYTE_CA /usr/local/share/ca-certificates/
 RUN update-ca-certificates
 
 COPY --from=0 /client/bin/Release/netcoreapp3.1/linux-musl-x64/publish/client /

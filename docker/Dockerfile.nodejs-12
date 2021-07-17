@@ -2,6 +2,8 @@ FROM node:12-stretch-slim
 
 RUN npm install request
 
-COPY zyte-smartproxy-ca.crt client.js /
+ARG ZYTE_CA
+ADD $ZYTE_CA .
+COPY client.js .
 
 CMD node client.js

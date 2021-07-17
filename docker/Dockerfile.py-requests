@@ -2,6 +2,8 @@ FROM python:3.8
 
 RUN pip3 install requests
 
-COPY zyte-smartproxy-ca.crt client-requests.py /
+ARG ZYTE_CA
+ADD $ZYTE_CA .
+COPY client-requests.py .
 
 CMD python3 client-requests.py

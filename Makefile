@@ -19,7 +19,8 @@ IMAGES=\
 all: $(IMAGES)
 
 $(IMAGES):
-	docker build -f docker/Dockerfile.$@ -t zyte-smartproxy-clients:$@ .
+	ZYTE_CA=https://docs.zyte.com/_static/zyte-smartproxy-ca.crt \
+	docker build --build-arg ZYTE_CA -f docker/Dockerfile.$@ -t zyte-smartproxy-clients:$@ .
 	docker run --rm --net=host -e URL -e KEY -e PROXY zyte-smartproxy-clients:$@
 
 .PHONY: all $(IMAGES)

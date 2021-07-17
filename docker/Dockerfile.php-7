@@ -1,5 +1,7 @@
 FROM php:7.4
 
-COPY zyte-smartproxy-ca.crt client.php /
+ARG ZYTE_CA
+ADD $ZYTE_CA .
+COPY client.php .
 
 CMD php client.php

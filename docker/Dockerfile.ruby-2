@@ -1,5 +1,7 @@
 FROM ruby:2.7
 
-COPY zyte-smartproxy-ca.crt client.rb /
+ARG ZYTE_CA
+ADD $ZYTE_CA .
+COPY client.rb .
 
 CMD ruby client.rb

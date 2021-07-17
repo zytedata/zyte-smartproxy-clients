@@ -13,10 +13,11 @@ RUN echo >src/lib.rs &&\
     echo 'tokio = { version = "1", default-features = false, features = ["macros", "rt-multi-thread"] }' >> Cargo.toml &&\
     cargo build
 
+ARG ZYTE_CA
+ADD $ZYTE_CA .
+
 ## Build binary
 COPY client.rs src/main.rs
 RUN cargo build
-
-COPY zyte-smartproxy-ca.crt .
 
 CMD cargo run

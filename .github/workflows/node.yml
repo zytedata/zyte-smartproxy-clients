@@ -1,4 +1,4 @@
-name: php-7
+name: nodejs
 on: push
 env:
   PROXY: proxy.zyte.com:8011
@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: make $GITHUB_WORKFLOW
+      - run: make nodejs-10
+      - run: make nodejs-12
+      - run: make nodejs-14

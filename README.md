@@ -1,24 +1,22 @@
-[![py-scrapy](https://github.com/zytedata/zyte-smartproxy-clients/workflows/py-scrapy/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:py-scrapy)
-[![py-requests](https://github.com/zytedata/zyte-smartproxy-clients/workflows/py-requests/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:py-requests)
-[![nodejs-10](https://github.com/zytedata/zyte-smartproxy-clients/workflows/nodejs-10/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:nodejs-10)
-[![nodejs-12](https://github.com/zytedata/zyte-smartproxy-clients/workflows/nodejs-12/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:nodejs-12)
-[![nodejs-14](https://github.com/zytedata/zyte-smartproxy-clients/workflows/nodejs-14/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:nodejs-14)
-[![php-5](https://github.com/zytedata/zyte-smartproxy-clients/workflows/php-5/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:php-5)
-[![php-7](https://github.com/zytedata/zyte-smartproxy-clients/workflows/php-7/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:php-7)
-[![java-7](https://github.com/zytedata/zyte-smartproxy-clients/workflows/java-7/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:java-7)
-[![java-14](https://github.com/zytedata/zyte-smartproxy-clients/workflows/java-14/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:java-14)
-[![ruby-2](https://github.com/zytedata/zyte-smartproxy-clients/workflows/ruby-2/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:ruby-2)
-[![r-4](https://github.com/zytedata/zyte-smartproxy-clients/workflows/r-4/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:r-4)
-[![dotnet-3](https://github.com/zytedata/zyte-smartproxy-clients/workflows/dotnet-3/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:dotnet-3)
+[![python](https://github.com/zytedata/zyte-smartproxy-clients/workflows/python/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:python)
+[![node](https://github.com/zytedata/zyte-smartproxy-clients/workflows/node/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:node)
+[![php](https://github.com/zytedata/zyte-smartproxy-clients/workflows/php/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:php)
+[![java](https://github.com/zytedata/zyte-smartproxy-clients/workflows/java/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:java)
+[![ruby](https://github.com/zytedata/zyte-smartproxy-clients/workflows/ruby/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:ruby)
+[![r](https://github.com/zytedata/zyte-smartproxy-clients/workflows/r/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:r)
+[![dotnet](https://github.com/zytedata/zyte-smartproxy-clients/workflows/dotnet/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:dotnet)
+[![julia](https://github.com/zytedata/zyte-smartproxy-clients/workflows/julia/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:julia)
+[![firefox](https://github.com/zytedata/zyte-smartproxy-clients/workflows/firefox/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:firefox)
+[![rust](https://github.com/zytedata/zyte-smartproxy-clients/workflows/rust/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:rust)
 
 
-Ensure you have `docker` and `make` installed and then run:
+To run locally:
 ```
-make CLIENT PROXY=... KEY=... URL=...
+make IMAGE PROXY=... KEY=... URL=...
 ```
 
 Where:
-* `CLIENT` - client name (:point_up: choose any from the badges above :point_up:)
+* `IMAGE` - Name of [docker image](docker)
 * `PROXY` - [Zyte Smart Proxy Manager](https://docs.zyte.com/smart-proxy-manager.html) API address
 * `KEY` - Zyte Smart Proxy Manager [API key](https://support.zyte.com/support/solutions/articles/22000188411)
 * `URL` - HTTPS URL to scrape
