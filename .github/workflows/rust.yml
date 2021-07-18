@@ -1,4 +1,4 @@
-name: rust
+name: Rust
 on: push
 env:
   PROXY: proxy.zyte.com:8014

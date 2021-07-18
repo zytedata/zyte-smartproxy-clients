@@ -1,4 +1,4 @@
-name: julia
+name: Julia
 on: push
 env:
   PROXY: proxy.zyte.com:8011
@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: make $GITHUB_WORKFLOW
+      - run: make julia

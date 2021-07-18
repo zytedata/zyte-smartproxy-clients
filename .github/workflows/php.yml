@@ -1,4 +1,4 @@
-name: php
+name: PHP
 on: push
 env:
   PROXY: proxy.zyte.com:8011
