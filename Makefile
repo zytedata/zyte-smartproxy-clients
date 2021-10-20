@@ -13,6 +13,7 @@ IMAGES=\
 	py-requests \
 	py-scrapy \
 	ruby-2 \
+	ruby-3 \
 	dotnet-3 \
 	dotnet-5 \
 	firefox
