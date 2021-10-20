@@ -8,6 +8,7 @@
 [![r](https://github.com/zytedata/zyte-smartproxy-clients/workflows/R/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:R)
 [![julia](https://github.com/zytedata/zyte-smartproxy-clients/workflows/Julia/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:Julia)
 [![firefox](https://github.com/zytedata/zyte-smartproxy-clients/workflows/Firefox/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:Firefox)
+[![erlang](https://github.com/zytedata/zyte-smartproxy-clients/workflows/Erlang/badge.svg)](https://github.com/zytedata/zyte-smartproxy-clients/actions?query=workflow:Erlang)
 
 
 To scrape locally, ensure `make` and `docker` are installed, then run:

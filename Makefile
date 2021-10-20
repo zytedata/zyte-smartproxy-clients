@@ -1,4 +1,5 @@
 IMAGES=\
+	erlang \
 	rust \
 	nodejs-10 \
 	nodejs-12 \

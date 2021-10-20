@@ -1,0 +1,11 @@
+FROM alpine:3.14
+
+RUN apk --no-cache add erlang
+
+ARG ZYTE_CA
+ADD $ZYTE_CA .
+COPY client.erl .
+
+RUN erlc client.erl
+
+CMD erl -noinput -s client
