@@ -1,7 +1,8 @@
-FROM alpine:3.13
+FROM alpine:edge
 
-RUN apk --no-cache add curl firefox py3-pip py3-cryptography
-RUN curl -L https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodriver-v0.29.1-linux64.tar.gz | tar xz &&\
+RUN echo "https://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+RUN apk --no-cache add curl firefox py3-pip py3-cryptography py3-zstandard py3-brotli
+RUN curl -L https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz | tar xz &&\
     mv geckodriver /usr/bin/
 RUN pip3 install selenium selenium-wire
 

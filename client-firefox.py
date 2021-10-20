@@ -6,7 +6,7 @@ from selenium.webdriver import FirefoxOptions
 options = FirefoxOptions()
 options.headless = True
 
-browser = webdriver.Firefox(
+driver = webdriver.Firefox(
     options=options,
     seleniumwire_options={
         'proxy': {
@@ -15,9 +15,9 @@ browser = webdriver.Firefox(
     }
 )
 
-browser.get(os.environ.get('URL'))
+driver.get(os.environ.get('URL'))
 
-body = browser.find_element_by_tag_name("body")
+body = driver.find_element("tag name", "body")
 resp = json.loads(body.text)
 
 print(resp['origin'])
