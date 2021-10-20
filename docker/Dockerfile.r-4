@@ -1,4 +1,4 @@
-FROM r-base:4.1.0
+FROM r-base:4.1.1
 
 RUN apt-get update && apt-get -y install libssl-dev libcurl4-openssl-dev
 
