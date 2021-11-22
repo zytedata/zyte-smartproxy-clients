@@ -8,4 +8,4 @@ COPY client.erl .
 
 RUN erlc client.erl
 
-CMD erl -noinput -s client
+CMD erl -noinput -s ssl -s inets -s client

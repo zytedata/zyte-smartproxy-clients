@@ -2,9 +2,6 @@
 -export([start/0]).
 
 start() ->
-    ssl:start(),
-    inets:start(),
-
     [Host, Port] = string:split(os:getenv("PROXY"), ":"),
     ok = httpc:set_options([
         {proxy,{{Host,list_to_integer(Port)},[]}}
@@ -17,4 +14,3 @@ start() ->
 
     io:format("~s",[Body]),
     halt(0).
-
