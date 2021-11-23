@@ -1,13 +1,13 @@
-using HTTP, MbedTLS, Base64
+using HTTP, MbedTLS
 
-conf = MbedTLS.SSLConfig()
-MbedTLS.config_defaults!(conf)
-MbedTLS.rng!(conf, MbedTLS.seed!(MbedTLS.CtrDrbg(), MbedTLS.Entropy()))
-MbedTLS.ca_chain!(conf, MbedTLS.crt_parse_file("zyte-smartproxy-ca.crt"))
-MbedTLS.authmode!(conf, MbedTLS.MBEDTLS_SSL_VERIFY_REQUIRED)
+ssl = MbedTLS.SSLConfig()
+MbedTLS.config_defaults!(ssl)
+MbedTLS.rng!(ssl, MbedTLS.seed!(MbedTLS.CtrDrbg(), MbedTLS.Entropy()))
+MbedTLS.ca_chain!(ssl, MbedTLS.crt_parse_file("zyte-smartproxy-ca.crt"))
+MbedTLS.authmode!(ssl, MbedTLS.MBEDTLS_SSL_VERIFY_REQUIRED)
 
-r = HTTP.get(ENV["URL"]; sslconfig=conf,
-        headers=["Proxy-Authorization" => "Basic " * Base64.base64encode(ENV["KEY"] * ":")],
-        proxy=("http://" * ENV["PROXY"]));
+proxy = "http://" * ENV["KEY"] * ":@" * ENV["PROXY"]
+
+r = HTTP.get(ENV["URL"]; sslconfig=ssl, proxy=proxy)
 
 print(String(r.body))
