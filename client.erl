@@ -1,7 +1,7 @@
 -module(client).
--export([start/0]).
+-export([scrape/0]).
 
-start() ->
+scrape() ->
     [Host, Port] = string:split(os:getenv("PROXY"), ":"),
     ok = httpc:set_options([
         {proxy,{{Host,list_to_integer(Port)},[]}}
@@ -12,5 +12,4 @@ start() ->
         {proxy_auth,{os:getenv("KEY"),""}}
     ], []),
 
-    io:format("~s",[Body]),
-    halt(0).
+    io:format("~s",[Body]).
