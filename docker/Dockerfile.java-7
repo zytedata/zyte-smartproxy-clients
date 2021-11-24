@@ -1,17 +1,15 @@
 FROM openjdk:7u91-jdk-alpine
 
 ENV HTTPCLIENT=4.5
-ENV HTTPCORE=4.4.1
 ENV HTTPPATH=httpcomponents-client-$HTTPCLIENT
-ENV CERTPATH=$JAVA_HOME/jre/lib/security/cacerts
 
 RUN wget http://archive.apache.org/dist/httpcomponents/httpclient/binary/$HTTPPATH-bin.tar.gz -O - | tar xz
 
 ARG ZYTE_CA
 ADD $ZYTE_CA .
-RUN keytool -noprompt -import -file zyte-smartproxy-ca.crt -storepass changeit -keystore $CERTPATH -alias zytesmartproxycert
+RUN keytool -noprompt -import -file zyte-smartproxy-ca.crt -storepass changeit -keystore $JAVA_HOME/jre/lib/security/cacerts
 
-COPY client.java .
-RUN javac -cp $HTTPPATH/lib/httpclient-$HTTPCLIENT.jar:$HTTPPATH/lib/httpcore-$HTTPCORE.jar client.java
+COPY clientApache.java .
+RUN javac -cp $HTTPPATH/lib/httpclient-$HTTPCLIENT.jar:$HTTPPATH/lib/httpcore-4.4.1.jar clientApache.java
 
-CMD java -cp $HTTPPATH/lib/*:. client
+CMD java -cp $HTTPPATH/lib/*:. clientApache

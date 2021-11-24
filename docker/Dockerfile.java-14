@@ -1,17 +1,10 @@
-FROM openjdk:14-jdk-alpine
-
-ENV HTTPCLIENT=4.5.9
-ENV HTTPCORE=4.4.11
-ENV HTTPPATH=httpcomponents-client-$HTTPCLIENT
-ENV CERTPATH=$JAVA_HOME/lib/security/cacerts
-
-RUN wget http://archive.apache.org/dist/httpcomponents/httpclient/binary/$HTTPPATH-bin.tar.gz -O - | tar xz
+FROM openjdk:14-alpine
 
 ARG ZYTE_CA
 ADD $ZYTE_CA .
-RUN keytool -noprompt -import -file zyte-smartproxy-ca.crt -storepass changeit -keystore $CERTPATH -alias zytesmartproxycert
+RUN keytool -noprompt -import -file zyte-smartproxy-ca.crt -storepass changeit -cacerts
 
 COPY client.java .
-RUN javac -cp $HTTPPATH/lib/httpclient-$HTTPCLIENT.jar:$HTTPPATH/lib/httpcore-$HTTPCORE.jar client.java
+RUN javac client.java
 
-CMD java -cp $HTTPPATH/lib/*:. client
+CMD java -Djdk.http.auth.tunneling.disabledSchemes= client
