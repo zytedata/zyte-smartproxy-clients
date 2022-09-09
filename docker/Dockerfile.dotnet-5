@@ -8,7 +8,7 @@ RUN dotnet -d new console && rm -rf obj Program.cs
 COPY client.cs .
 RUN dotnet -d publish -c Release -r linux-musl-x64 -p:PublishSingleFile=true
 
-FROM alpine:3.13
+FROM alpine:3.16
 
 RUN apk --no-cache add icu-libs krb5-libs ca-certificates
 

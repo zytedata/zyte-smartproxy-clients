@@ -1,4 +1,4 @@
-FROM julia:1.7-alpine
+FROM julia:1.8-alpine
 
 RUN julia -e 'using Pkg; Pkg.add("HTTP"); Pkg.add("MbedTLS");'
 
